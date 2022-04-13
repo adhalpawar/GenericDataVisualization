@@ -1,4 +1,8 @@
 
+/**
+ * Draws a stacked Bar Graph
+ * @param {object} obj Complete data set object
+ */
 
 function stackedBar(obj) {
 
@@ -127,7 +131,13 @@ function stackedBar(obj) {
 
 
 }
-
+/**
+ * Returns flat json objects
+ * @param {object} obj entire dataset
+ * @param {object} res object to push flatten data
+ * @param {text} extraKey temporary key
+ * @returns {object} Flat json object
+ */
 
 const flattenJSON = (obj = {}, res = {}, extraKey = '') => {
     for (key in obj) {
@@ -140,6 +150,11 @@ const flattenJSON = (obj = {}, res = {}, extraKey = '') => {
     return res;
 }
 
+/**
+ * Returns data object that can be used for draw graph
+ * @param {object} obj Entire dataset object
+ * @returns {object} Usable data object
+ */
 
 function getStackedData(res, obj) {
     let dataObj = []
