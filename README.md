@@ -1,19 +1,10 @@
-Title - Bar Chart using Complex Json File
+Project Title - Generic Data Visualization
 
 Description -
-This project reads JSON data dynamically uploaded by user and creates the bar chart.
-
+Generic Data Visualization aims at generating the charts and graphs from JSON data file uploaded by the user. In this project we aim to develop an applications that can use the JSON data file and parse it and generate using the user’s choice of data and visuals. 
 Technologies - HTML, CSS, SVG, JavaScript, and D3Js.
 
-How to use this project -
 
-1. Unzip the folder.
-2. Open the HTML file with visual studio code.
-3. Run the file with Live server.
-4. Upload the file in choose file section.
-5. Give the value of X-axis from the uploaded file and the name should be exact same.
-6. Repeat step - 4 for Y-axis.
-7. Go through the SampleDataInput image file for better understanding.
-8. You will see the graph is generated.
+
 
 By - Apoorva Dhalpawar
