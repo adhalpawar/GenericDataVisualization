@@ -93,6 +93,11 @@ function drawBarGraph(obj, flagh) {
 
 
 }
+/**
+ * Function to Draw Vertical Bar Graph
+ * Calls update() to update the values in the graph
+ */
+
 
 function verticalGraph() {
 
@@ -197,6 +202,14 @@ function verticalGraph() {
 
 
 }
+/**
+ * Updates the bar values in a vertical bar graph
+ * @param {object} data Filtered data
+ * @param {element} svg SVG element reference on the canvas
+ * @param {element} x x axis element
+ * @param {element} y y axis element
+ * @param {number} height height 
+ */
 
 function update(data, svg, x, y, height) {
 
@@ -221,6 +234,11 @@ function update(data, svg, x, y, height) {
 
 
 }
+
+/**
+ * Function to Draw Horizontal Bar Graph
+ * Calls update() to update the values in the graph
+ */
 
 function horizontalGraph() {
     dataObject = getDataObject()
@@ -316,6 +334,14 @@ function horizontalGraph() {
     let updateF = document.querySelector('#updateFilter').removeAttribute("hidden")
 
 }
+/**
+ * Updates the bar values in a Horizontal bar graph
+ * @param {object} data Filtered data
+ * @param {element} svg SVG element reference on the canvas
+ * @param {element} x x axis element
+ * @param {element} y y axis element
+ * @param {number} height height 
+ */
 
 function updateH(data, svg, x, y, height) {
 
@@ -339,7 +365,10 @@ function updateH(data, svg, x, y, height) {
 
 
 }
-
+/**
+ * Function to Draw Connected Scatter Graph
+ * Calls update() to update the values in the graph
+ */
 function connectedScatter() {
 
     dataObject = getDataObject()
@@ -422,7 +451,13 @@ function connectedScatter() {
 
 
 }
-
+/**
+ * Updates the values in a connected scatter graph
+ * @param {object} data Filtered data
+ * @param {element} svg SVG element reference on the canvas
+ * @param {element} x x axis element
+ * @param {element} y y axis element
+ */
 function updateCS(data, svg, x, y) {
 
     svg.append("path")
@@ -455,7 +490,10 @@ function updateCS(data, svg, x, y) {
 
 
 }
-
+/**
+ * Function to get random colours in the graphs
+ * @returns {text} Random HEX code generetaed
+ */
 var randomColor = (function () {
     var golden_ratio_conjugate = 0.618033988749895;
     var h = Math.random();
@@ -492,7 +530,10 @@ var randomColor = (function () {
     };
 })();
 
-
+/**
+ * Function to Draw Bubble Graph
+ * Calls update() to update the values in the graph
+ */
 function bubbleGraph() {
 
     dataObject = getDataObject()
@@ -577,6 +618,13 @@ function bubbleGraph() {
 
 
 }
+/**
+ * Updates the values in a Bubble graph
+ * @param {object} data Filtered data
+ * @param {element} svg SVG element reference on the canvas
+ * @param {element} x x axis element
+ * @param {element} y y axis element
+ */
 function updateB(data, svg, x, y, z) {
 
 
@@ -596,6 +644,10 @@ function updateB(data, svg, x, y, z) {
 
 }
 
+/**
+ * Function to Draw Line Graph
+ * Calls update() to update the values in the graph
+ */
 function lineGrapgh() {
 
     dataObject = getDataObject()
@@ -679,7 +731,14 @@ function lineGrapgh() {
 
 
 }
-
+/**
+ * Updates the values in a Line graph
+ * @param {object} data Filtered data
+ * @param {element} svg SVG element reference on the canvas
+ * @param {element} x x axis element
+ * @param {element} y y axis element
+ * @param {element} max maximum value element
+ */
 function updateL(data, svg, x, y, max) {
     svg.append("linearGradient")
         .attr("id", "line-gradient")
@@ -717,6 +776,10 @@ function updateL(data, svg, x, y, max) {
 
 
 }
+/**
+ * Function to Draw Pie Graph
+ * Calls update() to update the values in the graph
+ */
 
 function pieGraph() {
 
@@ -798,7 +861,13 @@ function pieGraph() {
 
 
 }
-
+/**
+ * Updates the values in a Pie graph
+ * @param {object} data1 Filtered data
+ * @param {element} group Group element for all partitions
+ * @param {element} path path element for individual partitons
+ * @param {element} label labels for partitons
+ */
 function updateP(data1, group, path, label) {
 
     var pie = d3.pie()
@@ -832,6 +901,13 @@ function updateP(data1, group, path, label) {
 
 
 }
+
+
+/**
+ * Returns categorical values array from the filtered data
+ * @param {object} filteredData Filtered data
+ * @returns Categorical values Array 
+ */
 function getcatArray() {
 
     let catValue = document.getElementById("barX").value
@@ -871,6 +947,13 @@ function getcatArray() {
     return result
 }
 
+/**
+ * Returns numerical values array from the filtered data
+ * @param {object} filteredData Filtered data
+ * @returns Numerical values Array 
+ */
+
+
 function getnumArray() {
 
     let numValue = document.getElementById("barY").value
@@ -895,6 +978,11 @@ function getnumArray() {
 
     return numData
 }
+/**Maps the categorical data to numerical data
+ * @param {object} catData Filtered categorical data
+ * @param {object} numData Filtered numerical data
+ * @returns Data object
+ */
 
 function getDataObject() {
 
@@ -955,6 +1043,10 @@ function getDataObject() {
 
 }
 
+/**
+ * Returns the array of simplified keys
+ * @returns Array of keys
+ */
 function getkeys() {
     let catValue = document.getElementById("barX").value
     let numValue = document.getElementById("barY").value
@@ -989,7 +1081,10 @@ function getkeys() {
 
 
 }
-
+/**
+ * Increases scalefactor based on user input to change width
+ * @returns {number} scalefactor
+ */
 function increaseValue() {
     var value = parseInt(document.getElementById('number').value, 10);
     var scaleFactor = 1;
@@ -1002,6 +1097,10 @@ function increaseValue() {
 
 }
 
+/**
+ * Decreases scalefactor based on user input to change width
+ * @returns {number} scalefactor
+ */
 function decreaseValue() {
     var value = parseInt(document.getElementById('number').value, 10);
     var scaleFactor = 1;
