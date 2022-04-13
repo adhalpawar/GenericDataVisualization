@@ -7,4 +7,4 @@ Generic Data Visualization aims at generating the charts and graphs from JSON da
 
 
 
-By - Apoorva Dhalpawar
+
