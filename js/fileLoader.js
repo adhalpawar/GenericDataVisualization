@@ -108,6 +108,12 @@ function getSecondaryKeys(obj, keyArr = [], primKey, primkeyArr) {
 
     return keyArr;
 }
+/**
+ * Filters the nentire dataset and returns the filtered data
+ * @param {object} obj Complex JSON object 
+ * @param {text} filter Filter key
+ * @returns JSON object of filtered data
+ */
 
 function dataFilter(obj, filter) {
 
