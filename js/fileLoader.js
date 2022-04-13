@@ -82,6 +82,13 @@ document.getElementById('import').onclick = function () {
 
 };
 
+/**
+ * Returns array of primary keys
+ * @param {object} obj Complex JSON Object
+ * @param {array} keyArr Empty array for returning
+ * @returns {array} Array of Primary Keys 
+ */
+
 function getPrimaryKeys(obj, keyArr = []) {
     for (keys in obj[0]) {
         if (typeof obj[0][keys] != "object") {
@@ -92,6 +99,15 @@ function getPrimaryKeys(obj, keyArr = []) {
 
     return keyArr;
 }
+
+/**
+ * Returns array of secondary keys
+ * @param {object} obj Complex JSON Object
+ * @param {array} keyArr Empty Array
+ * @param {text} primKey Primary key for the secondary keys
+ * @param {array} primkeyArr Primary Key array
+ * @returns Array of secondary keys
+ */
 
 function getSecondaryKeys(obj, keyArr = [], primKey, primkeyArr) {
     for (keys in obj[0]) {
